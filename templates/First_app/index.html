@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Musician list</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+
+    <a href="/First_app/form2/">Add new Musician</a><br>
+    <h1>  {{text1}}</h1>
+
+  <br>
+
+  <table border="2">
+    <tr>
+      <th>First name</th>
+      <th>Last Name</th>
+      <th>Instruement</th>
+    </tr>
+    {% for row in musician %}
+
+     <tr>
+       <td>{{row.first_name}}</td>
+       <td>{{row.last_name}}</td>
+       <td>{{row.instrument}}</td>
+     </tr>
+    {% endfor %}
+  </table>
+  </body>
+</html>
